@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	  <meta name="theme-color" content="rgb(02,07,64)"/>
+<meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <link rel="stylesheet" src="css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>CalcDesconto</title>
+</head>
+<script type="text/javascript">
+	const run = document.getElementById("run");
+	window.addEventListener('load', function(){
+		const btnRun = document.getElementById('run').addEventListener('click', function(e){
+		const campoValor = document.getElementById("campoValor");
+			const campoValorTwo = document.getElementById("campoValorTwo");
+			const campoVazio = '';
+			if (campoValor.value === campoVazio) {
+				alert('campo VALOR vazio');
+			} 
+			if (campoValorTwo.value === campoVazio) {
+					alert('campo DESCONTO vazio');
+				}
+			if (campoValor.value && campoValorTwo.value != campoVazio) {
+				function apresent(){
+					const campoValor = document.getElementById("campoValor");
+					const campoValorTwo = document.getElementById("campoValorTwo");
+					const displayResult = document.getElementById("displayResult");
+					const displayResultTwo = document.getElementById("displayResultTwo");
+					const displayResultFor = document.getElementById("displayResultFor");
+					const valorEmDesconto = campoValorTwo.value / 100 * campoValor.value;
+					const totalComDesconto = campoValor.value - valorEmDesconto.toFixed(2);
+							displayResult.innerHTML = "R$: " + campoValor.value;
+							displayResultTwo.innerHTML = campoValorTwo.value + "%";
+							displayResultTree.innerHTML ="R$: " + valorEmDesconto.toFixed(2);		
+							displayResultFor.innerHTML ="R$: " + totalComDesconto.toFixed(2);
+					};
+					apresent()
+				}
+			e.preventDefault()
+		})
+		
+	});
+	//CAMPOS VAZIO
+	window.addEventListener("load", function () {
+		const calcKm = document.getElementById('calcKm').addEventListener("click", function(e){
+			const campoValor = document.getElementById("campoValor");
+			const campoValorTwo = document.getElementById("campoValorTwo");
+			const campoVazio = '';
+			if (campoValor.value === campoVazio) {
+				alert('campo VALOR vazio');
+			} 
+			if (campoValorTwo.value === campoVazio) {
+					alert('campo DESCONTO vazio');
+				}
+			if (campoValor.value && campoValorTwo.value != campoVazio) {
+				window.open('https://www.dimgitaldim.site/calc/calcKm.html');
+			}
+		e.preventDefault();
+		});
+    });	
+</script>
+<style type="text/css">
+	.interface h1{
+	font-family:monospace;
+	color:green;
+	padding:1px;
+	margin:3px auto;
+	margin-bottom:0px;
+	font-size:16px;
+	text-align:center;
+	}
+	.interface h4{
+		font-size:13px;
+		text-align:center;
+		margin-bottom:2px;
+	}
+	input {
+	width:120px;
+	margin:0px 74px auto;
+	text-align:center;
+	}
+	.campoValor {
+	text-align:center;
+	place-content:left;
+	color:green;
+	}
+	.campoValorDesc {
+	text-align:center;
+	color: orange;
+	place-content:left;
+	}
+	.displayResult,.displayResultTwo,.displayResultTree,.displayResultFor {
+		text-align:right;
+		font-size: 15px;
+		margin:0px 25px auto;
+		color: green;
+		float:right;
+		clear:both;
+	}
+	footer{
+	background:white;
+	width:290px;
+	height:180px;
+	border:4px solid #eee;
+	text-align:center;
+	margin:-10px auto;
+	color:red;
+	font-family:monospace;
+	border:2px solid #eee;
+	}
+	footer hr{
+		border: 0.1px solid green;
+		margin-top: -1px;
+		margin-bottom: -0px;		
+	}
+	footer h1{
+		color: LightBlue;
+		font-family:monospace;
+		font-size:5px;
+	}
+	footer ul{
+	color: black;
+	font-size:13px;
+	padding:4px;
+	text-align:left;
+	text-decoration:none;
+	}
+	.interface {
+	width: 310px;
+	height: 210px;
+	border: 1px solid green;
+	margin: 5px auto;
+	text-align:center;
+	}
+	button {
+		width:90px;
+		height:30px;
+		background:white;
+		color: green;
+		margin:10px 0px auto;
+		margin-bottom:5px;
+		border:1px solid #eee;
+	}
+	button#calcKm {
+	font-family:monospace;
+	font-size:12px;
+	width:180px;
+	height:30px;
+	background: black;
+	color: yellow;
+	border:1px solid #eee;
+	margin-top:-30px;
+	
+	}
+	.container {
+	width:310px;
+	margin-top: -6px;
+	background: white;
+	border: 2px solid #eee;	
+	}
+	.container.displayTop{
+		width: 310px;
+		height: 29px;
+		background: white;
+	}
+	hr {
+	margin-top:0px;
+	margin-bottom: 12px;	
+	}
+	img{
+	height:30px;
+	width:30px;
+	}
+	h1{
+	font-size:10px;
+	color:DarkGray;
+	font-weight:bold;
+	text-align:center;
+	}
+	#ads{
+	text-align: center;
+	margin-top:-15px;
+	border:0px solid #eee;
+	}
+	
+	#ads h2{
+	font-size:6px;
+	color: white;
+	}
+</style>
+<body>
+<script type="application/javascript" data-idzone="3927825"  data-ad_frequency_count="1"  data-ad_frequency_period="720"  data-browser_settings="1" data-ad_trigger_method="3" src="https://a.exdynsrv.com/fp-interstitial.js"></script>
+<div class="interface">
+	<div class="container displayTop">
+	<h1 id="displayPrinc">Calcule o desconto com D.I.M</h1>
+	</div>
+	<div class="interfaceCampos" >
+	<div class="displayRs" >
+	<h4>Valor</h4>
+	<input type="number" placeholder="R$"  class="campoValor" value="" name="" id="campoValor" >
+	</div>
+	<div class="displayDesc" >
+	<h4>Desconto</h4>
+	<input type="number" placeholder="%"  class="campoValorDesc"  value="" name="" id="campoValorTwo" >
+	</div>
+	</div>
+	<button type="button"  id="run" onclick="apresent()">Run</button>
+	<hr>
+	<button type="button"  id="calcKm">Calcule o Km com D.I.M</button>
+</div>
+<hr>
+<footer>
+	<ul>valor:<div class="displayResult" id="displayResult" type="number" value="">R$ 0,00</div></ul>
+	<hr>
+	<ul>Desconto:<div class="displayResultTwo" id="displayResultTwo" type="number" value="">%</div></ul>	
+	<hr>
+	<ul>desconto em R$<div class="displayResultTree" id="displayResultTree" type="number" value="">R$ 0,00</div></ul>
+	<hr>
+	<ul>Total:<div class="displayResultFor" id="displayResultFor" type="number" value="">R$ 0,00</div></ul>
+</footer>
+<div id="ads">
+    <h2>anúncio</h2>
+	<script type="text/javascript">
+		atOptions = {
+		'key' : '4fe54e99f80f13f8bb511fe276aab070',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+		};
+		document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplaynetwork.com/4fe54e99f80f13f8bb511fe276aab070/invoke.js"></scr' + 'ipt>');
+		</script>
+  </div>
+<div class="container">
+  <h1>desenvolvido por <a href="https://dimgitaldim.site" ><span><img src="img/favicon.png"></span></a></h1>
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<script type="text/javascript">
+window.addEventListener("load", function apresent(e){
+var hora = new Date().getHours();
+var display = document.getElementById('display');
+var displayTwo = document.getElementById('displayTwo');
+ if (hora < 12)
+ alert("bom dia")
+ displayTwo.innerHTML = "bom dia";
+ if (hora >= 12 && hora < 18)
+ alert("boa tarde");
+ displayTwo.innerHTML = "Olá, " + boaTarde;
+ if (hora >= 18 && hora < 24)
+ alert("boa noite")
+ displayTwo.innerHTML = "Boa noite";
+ })
+</script>
+<body>
+<div id="display" value="">Olá</div>
+<div id="displayTwo"></div>
+</body>
+</html>

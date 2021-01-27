@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	  <meta name="theme-color" content="rgb(02,07,64)"/>
+<meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <link rel="stylesheet" src="css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>CalcKm</title>
+</head>
+<script type="text/javascript">
+	const run = document.getElementById("run");
+	window.addEventListener('load', function(){
+		const btnRun = document.getElementById('run').addEventListener('click', function(e){
+			const campoValorTwo = document.getElementById("campoValorTwo");
+			const campoVazio = '';
+			if (campoValor.value === campoVazio) {
+				alert('campo KM/M vazio');
+			} 
+			if (campoValorTwo.value === campoVazio) {
+					alert('campo VALOR P/ KM vazio');
+				}
+			if (campoValor.value && campoValorTwo.value != campoVazio) {
+				function apresent(){
+					const campoValor = document.getElementById("campoValor");
+					const campoValorTwo = document.getElementById("campoValorTwo");
+					const displayResult = document.getElementById("displayResult");
+					const displayResultTwo = document.getElementById("displayResultTwo");
+					const displayResultTree = document.getElementById('displayResultTree');
+					const displayResultFor = document.getElementById("displayResultFor");
+					const kmVzsMilMetros = campoValor.value * 1000;
+					const kmDivPorMil = campoValorTwo.value / 1000;
+					const valorAcobrarPorKm = kmDivPorMil * kmVzsMilMetros;
+					const valorPorCemMetros = campoValorTwo.value / 1000;
+							displayResult.innerHTML = "Km/m " + kmVzsMilMetros;
+							displayResultTwo.innerHTML ="R$/Km " + campoValorTwo.value;
+							displayResultTree.innerHTML ="R$/100m " + valorPorCemMetros;		
+							displayResultFor.innerHTML = "R$ " + valorAcobrarPorKm.toFixed(2);
+					};
+					apresent()
+				}
+			e.preventDefault()
+		})
+		
+	});
+	
+	//CAMPOS VAZIO
+	window.addEventListener("load", function verificaValues(e) {
+		const calcKm = document.getElementById('calcKm').addEventListener("click", function(e){
+			const campoValor = document.getElementById("campoValor");
+			const campoValorTwo = document.getElementById("campoValorTwo");
+			const campoVazio = '';
+			if (campoValor.value === campoVazio) {
+				alert('campo KM/M vazio');
+			} 
+			if (campoValorTwo.value === campoVazio) {
+					alert('campo VALOR P/ KM vazio');
+				}
+			if (campoValor.value && campoValorTwo.value != campoVazio) {
+				const calcKm = document.getElementById('calcKm').addEventListener('click', function(){
+					window.open('https://www.dimgitaldim.site/calc/index.html');
+				})
+			}
+		e.preventDefault();
+		});
+    });
+</script>
+<style type="text/css">
+	.interface h1{
+	font-family:monospace;
+	color: yellow;
+	padding:1px;
+	margin:3px auto;
+	margin-bottom:0px;
+	font-size:16px;
+	text-align:center;
+	}
+	.interface h4{
+		font-size:13px;
+		text-align:center;
+		margin-bottom:2px;
+	}
+	.interface p{
+		margin-top: -2px;
+		margin-bottom: 2px;
+		font-size:12px;
+	}
+	input {
+	width:120px;
+	margin:0px 74px auto;
+	text-align:center;
+	color:yellow;
+	background: black;
+	}
+	.campoValor {
+	text-align:center;
+	place-content:left;
+	color:yellow;
+	}
+	.campoValorDesc {
+	text-align:center;
+	color: yellow;
+	place-content:left;
+	}
+	.displayResult,.displayResultTwo,.displayResultTree,.displayResultFor {
+		text-align:right;
+		font-size: 15px;
+		margin:0px 25px auto;
+		color: white;
+		float:right;
+		clear:both;
+	}
+	footer{
+	background: black;
+	width:290px;
+	height:180px;
+	border:4px solid #eee;
+	text-align:center;
+	margin:-10px auto;
+	color:red;
+	font-family:monospace;
+	border:2px solid #eee;
+	}
+	footer hr{
+		border: 0.1px solid white;
+		margin-top: -1px;
+		margin-bottom: -0px;		
+	}
+	footer h1{
+		color: LightBlue;
+		font-family:monospace;
+		font-size:5px;
+	}
+	footer ul{
+	color: yellow;
+	font-size:13px;
+	padding:4px;
+	text-align:left;
+	text-decoration:none;
+	}
+	.interface {
+	width: 310px;
+	height: 230px;
+	border: 1px solid black;
+	margin: 5px auto;
+	text-align:center;
+	}
+	button {
+		width:90px;
+		height:30px;
+		background: black;
+		color: yellow;
+		margin:5px 0px auto;
+		margin-bottom:5px;
+		border:1px solid #eee;
+	}
+	
+	button#calcKm {
+	font-family:monospace;
+	font-size:12px;
+	width:220px;
+	height:30px;
+	background: white;
+	color: green;
+	border:1px solid #eee;
+	margin-top:-15px;
+	text-align: center;
+	}
+	a{
+	font-family:monospace;
+	width:90px;
+	height:30px;
+	background: white;
+	color: green;
+	margin-top:-20px;
+	}
+	.container {
+	width:310px;
+	margin-top: -6px;
+	background: white;
+	border: 2px solid #eee;	
+	}
+	.container.displayTop{
+		width: 310px;
+		height: 29px;
+		background: black;	
+		color: yellow;
+	}
+	hr {
+	margin-top:0px;
+	}
+	img{
+	height:30px;
+	width:30px;
+	}
+	h1{
+	font-size:10px;
+	color:DarkGray;
+	font-weight:bold;
+	text-align:center;
+	}
+	#ads{
+	text-align: center;
+	margin-top:-15px;
+	border:0px solid #eee;
+	}
+	#ads h2{
+	font-size:6px;
+	color: white;
+	}
+</style>
+<body>
+	<script type="application/javascript" data-idzone="3927825"  data-ad_frequency_count="1"  data-ad_frequency_period="720"  data-browser_settings="1" data-ad_trigger_method="3" src="https://a.exdynsrv.com/fp-interstitial.js"></script>
+	<div class="interface">
+		<div class="container displayTop">
+	<h1 id="displayPrinc">Calcule o KM com D.I.M</h1>
+	</div>
+	<div class="interfaceCampos" >
+	<div class="displayRs" >
+	<h4>Km Total</h4>
+	<input type="number" placeholder="km/m"  class="campoValor" value="" name="" id="campoValor" >
+	</div>
+	<div class="displayDesc" >
+	<h4>Valor P/ Km</h4>
+	<input type="number" placeholder="valor p/ km"  class="campoValorDesc"  value="" name="" id="campoValorTwo" >
+	</div>
+	</div>
+	<button type="button"  id="run">Run</button>
+	<p>Valor em média por 1 Km: R$ 1,50</p>
+	<hr>
+	<button type="button"  id="calcKm">Calcule o Desconto com D.I.M</button>
+</div>
+<hr>
+<footer>
+	<ul>Km Total:<div class="displayResult" id="displayResult" type="number" value="">Km 0.00</div></ul>
+	<hr>
+	<ul>Valor P/ Km:<div class="displayResultTwo" id="displayResultTwo" type="number" value="">R$/Km</div></ul>	
+	<hr>
+	<ul>valor P/ 100m:<div class="displayResultTree" id="displayResultTree" type="number" value="">R$/100m 0,00</div></ul>
+	<hr>
+	<ul>Valor a Cobrar:<div class="displayResultFor" id="displayResultFor" type="number" value="">R$ 0,00</div></ul>
+</footer>
+<div id="ads">
+    <h2>anúncio</h2>
+    <script type="text/javascript">
+    atOptions = {
+    'key' : '4fe54e99f80f13f8bb511fe276aab070',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+    };
+    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplaynetwork.com/4fe54e99f80f13f8bb511fe276aab070/invoke.js"></scr' + 'ipt>');
+    </script>
+  </div>
+<div class="container">
+  <h1>desenvolvido por <a href="https://dimgitaldim.site" ><span><img src="img/favicon.png"></span></a></h1>
+  </div>
+</body>
+</html>

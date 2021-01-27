@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countClick</title>
+</head>
+<style>
+    .interface{
+        margin: 20px auto;
+        width: 240px;
+        height: 180px;
+        border: 1px solid #eee;
+        text-align: center  ;
+    }
+    .interface h1{
+        font-family: monospace;
+        font-size: 40px;
+        color: darkblue;
+    }
+    .interface p{
+        font-family: monospace;
+        font-size: 20px;
+        color: rgb(158, 157, 157);
+    }
+    button{
+        width: 75px;        
+        height: 25px;
+        font-size: 15px;
+        margin-top: 10px;
+        background: darkblue;
+        color: white;
+        font-family: monospace;
+    }
+    /*
+
+    CÓDIGOS INTERFACE DOIS(2) 
+    
+    */
+    .interfaceDois{
+        background: rgb(230, 230, 230);
+        margin: 20px auto;
+        width: 240px;
+        height: 200px;
+        border: 1px solid #eee;
+        text-align: center;
+    }
+    .interfaceDois h1{
+        font-family: monospace;
+        font-size: 40px;
+        color: darkblue;
+    }
+    .interfaceDois p{
+        width: 240px;
+        height: 30px;
+        margin-top: 5px;
+        font-family: monospace;
+        font-size: 18px;
+        color: rgb(158, 157, 157);
+        border: 0px solid red;
+    }
+    .interfaceDois button{
+        width: 75px;        
+        height: 25px;
+        font-size: 15px;
+        margin-top: 10px;
+        background: darkblue;
+        color: white;
+        font-family: monospace;
+    }
+    .interfaceDois .likes{
+        color: green;
+    }
+    .interfaceDois .deslikes{
+        color: red;
+    }
+    .interfaceDois .areaLike{
+        display: block;
+        width: 100px;
+        height: 100px;
+        border: 0px solid green;
+        text-align: left;
+        float: left;
+        margin-left: 15px;
+        margin-top: 8px;
+    }
+    .interfaceDois .areaDeslike{
+        float: right;
+        display: block;
+        width: 100px;
+        height: 100px;
+        border: 0px solid red;
+        text-align: right;
+        margin-right: 15px;
+        margin-top: 8px;
+    }
+    .interfaceDois img{
+        text-align: center;
+        width: 80px;
+        height: 100px;
+    }
+    
+    .displayNumeros{
+        clear: both;
+        text-align: center;
+        width: 238px;
+        height: 35px;
+        margin-bottom: 20px;
+        border: 0px solid black;
+    }
+    .spanLike{
+        float: left;
+        margin-top: 12px;
+        margin-left: 35px;
+        width: 40px;
+        height: 20px;
+        border: 1px solid green;
+    }
+    .spanDeslike{
+        float: right;
+        margin-top: 12px;
+        margin-right: 35px;
+        width: 40px;
+        height: 20px;
+        border: 1px solid red;
+    }
+</style>
+<script>
+    window.addEventListener('load', () => {
+        var countClickImgLike = 0;
+        var btnImgLike = document.getElementById('btnImgLike').addEventListener('click', () => {
+                var textBottom = document.getElementById('textBottom');
+                textBottom.textContent = "Like foi clicado";
+                var displayLike = document.getElementById('displayLike');
+                displayLike.textContent = countClickImgLike += 1;
+            })
+        var countClickImgDeslike = 0;
+        var btnImgDeslike = document.getElementById('btnImgDeslike').addEventListener('click', () => {
+            var textBottom = document.getElementById('textBottom');
+            textBottom.textContent = "Dislike foi clicado";
+            var displayDeslike = document.getElementById('displayDeslike');
+            displayDeslike.textContent = countClickImgDeslike += 1;
+        })
+        var countClick = 0;
+        document.getElementById('btnAlert').addEventListener('click', () => {
+            var textInterface = document.getElementById('textInterface');
+            textInterface.textContent = countClick += 1;  
+        });
+    });
+</script>
+<body>
+        <div  class="interface">
+            <button id="btnAlert">
+                clique
+            </button>
+            <h1 id="textInterface">Interface</h1>
+            <p>Nº de Cliques</p>
+        </div>
+
+        <!-- CÓDIGOS INTERFACE DOIS(2) --->
+
+        <div  class="interfaceDois">
+            <div id="areaLike" class="areaLike"><img id="btnImgLike" class="btnImgLike" src="img/like.png" alt="like"></div>
+            <div id="areaDeslike" class="areaDeslike"><img id="btnImgDeslike" class="btnImgDeslike" src="img/desLike.png" alt="deslike"></div>
+            <div id="displayNumeros" class="displayNumeros"><span id="displayLike" class="spanLike">0</span><span id="displayDeslike" class="spanDeslike">0</span></div>
+            <p id="textBottom">Nº de <span class="likes">Likes</span> e <span class="deslikes">Deslikes</span></p>
+        </div>
+</body>
+</html>        
